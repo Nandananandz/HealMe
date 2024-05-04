@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:healme/Screen/LoginScreen/LoginScreen.dart';
-
+import 'package:sizer/sizer.dart';
+double width = 3.8;
+ double height = 8.9;
+ double fontsize = 1.2;
 void main() {
-  runApp(const HealMe());
+  runApp( HealMe());
 }
 
 class HealMe extends StatelessWidget {
-  const HealMe({super.key});
+   HealMe({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home:LoginScreen());
+
+    return 
+    Sizer(
+      builder: (context,Orientation,DeviceType) {
+        return MaterialApp(home:LoginScreen());
+      }
+    );
   }
 }
  
