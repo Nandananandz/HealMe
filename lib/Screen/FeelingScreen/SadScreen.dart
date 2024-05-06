@@ -4,8 +4,8 @@ import 'package:healme/Screen/HomeScreen/QuoteCard.dart';
 import 'package:healme/Screen/HomeScreen/RepeatContainer.dart';
 import 'package:sizer/sizer.dart';
 
-class HappyScreen extends StatelessWidget {
-   HappyScreen({super.key});
+class SadScreen extends StatelessWidget {
+   SadScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class HappyScreen extends StatelessWidget {
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
                      Text("You are feeling",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w600, ),),
-                   Text("Happy!",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w800 ),)
+                   Text("Sad☹️",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w800 ),)
                      
                    ],
                  ),
@@ -72,9 +72,9 @@ class HappyScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 3.h,)   ,
-             QuoteCard(textdata: "“Happiness is not the absence of problems, it's the ability to deal with them.”") ,
+             QuoteCard(textdata: "“Sadness is a part of life, just as joy is. It is not a sign of weakness, but a reminder to take care of ourselves.”") ,
                      SizedBox(height: 3.h,)   ,
-                     RepeatContainer(Headertext: "Talk to Someone", describetext: "Human relationships are rich and they're messy and demanding. And we clean them up with technology.Share your thoughts our friend or a chat bot", goto: "Know more", ctColor: Colors.red.shade100)
+                     RepeatContainer(Headertext: "Talk to Someone", describetext: "It’s okay to not be okay, Let’s care for ourselves, Self is more.. And we clean them up with technology.Share your thoughts our friend or a chat bot", goto: "Know more", ctColor: Colors.green.shade100)
           
               ],
             ),

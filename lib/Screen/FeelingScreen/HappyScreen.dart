@@ -36,8 +36,8 @@ class HappyScreen extends StatelessWidget {
                  Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
-                     Text("You are feeling",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w600, ),),
-                   Text("Happy!",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w800 ),)
+                     Text("You’re feeling",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w600, ),),
+                   Text(" Happy🥰",style: GoogleFonts.epilogue(color:Colors.black,fontSize: 16.sp,fontWeight: FontWeight.w800 ),)
                      
                    ],
                  ),

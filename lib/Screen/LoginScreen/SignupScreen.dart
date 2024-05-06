@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healme/Screen/HomeScreen/HomeScreen.dart';
 import 'package:sizer/sizer.dart';
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -40,11 +41,16 @@ class SignupScreen extends StatelessWidget {
         ],
       ),
       SizedBox(height: 10.h,),
-      Container(width: 50.w,
-      height: 4.h,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(2.9.w)),
-      child: Text("Sign up",style: GoogleFonts.epilogue(color: Colors.white),),),
+      InkWell(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomeScreen()));
+        },
+        child: Container(width: 50.w,
+        height: 4.h,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(2.9.w)),
+        child: Text("Sign up",style: GoogleFonts.epilogue(color: Colors.white),),),
+      ),
 
       
      ],

@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healme/Screen/FeelingScreen/AngryScreen.dart';
+import 'package:healme/Screen/FeelingScreen/CalmScreen.dart';
+import 'package:healme/Screen/FeelingScreen/HappyScreen.dart';
+import 'package:healme/Screen/FeelingScreen/SadScreen.dart';
 import 'package:healme/Screen/HomeScreen/EmotionCard.dart';
 import 'package:healme/Screen/HomeScreen/QuoteCard.dart';
 import 'package:healme/Screen/HomeScreen/RepeatContainer.dart';
 import 'package:healme/Screen/HomeScreen/menuCard.dart';
+import 'package:http/http.dart';
 import 'package:sizer/sizer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -60,7 +67,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 3.h,),
                   Row(
                     children: [
-                 for  (List data in emotionsList)     EmotionCard(assetImage: data[0], buttonText: data[1])
+                 for  (List data in emotionsList)     InkWell(
+                  onTap: () {
+                    if(data[1]=="Happy") {
+                   Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HappyScreen()));
+                    }
+                   else if(data[1]=="Angry") {
+                   Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AngryScreen()));
+                    }
+                   else if(data[1]=="Sad") {
+                   Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SadScreen()));
+                    }
+                   else if(data[1]=="Calm") {
+                   Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CalmScreen()));
+                    }
+                  },
+                  
+                  
+                  child: EmotionCard(assetImage: data[0], buttonText: data[1]))
+                 
                  
                       ],
                     ),
