@@ -22,7 +22,7 @@ class HealMe extends StatelessWidget {
     return 
     Sizer(
       builder: (context,Orientation,DeviceType) {
-        return MaterialApp(home:JournalScreen());
+        return MaterialApp(home:LoginScreen());
       }
     );
   }

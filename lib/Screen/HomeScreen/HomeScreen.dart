@@ -6,10 +6,13 @@ import 'package:healme/Screen/FeelingScreen/AngryScreen.dart';
 import 'package:healme/Screen/FeelingScreen/CalmScreen.dart';
 import 'package:healme/Screen/FeelingScreen/HappyScreen.dart';
 import 'package:healme/Screen/FeelingScreen/SadScreen.dart';
+import 'package:healme/Screen/HomeScreen/AssesmentScreen.dart';
 import 'package:healme/Screen/HomeScreen/EmotionCard.dart';
 import 'package:healme/Screen/HomeScreen/QuoteCard.dart';
 import 'package:healme/Screen/HomeScreen/RepeatContainer.dart';
 import 'package:healme/Screen/HomeScreen/menuCard.dart';
+import 'package:healme/Screen/JournalScreen/JournalScreen.dart';
+import 'package:healme/Screen/ProfileScreen/ProfileScreen.dart';
 import 'package:http/http.dart';
 import 'package:sizer/sizer.dart';
 
@@ -41,12 +44,18 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 3.h,),
               Row(
                 children: [
-                  Container(
-                   width: 10.w,
-                   height: 10.w,
-                  
-                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.w),color: Colors.blueAccent),
-                   child: Icon(Icons.person_2,size: 8.w,),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()));
+                    },
+                    child: Container(
+                     width: 10.w,
+                     height: 10.w,
+                    
+                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.w),color: Colors.blueAccent),
+                     child: Icon(Icons.person_2,size: 8.w,),
+                    ),
                   ),
                   Expanded(child: Container()),
                   Icon(Icons.notifications),
@@ -96,37 +105,49 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(height: 6.h,),
             Row(
               children: [
-                Container(width: 42.w,
-                        height: 7.h,
-                        decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
-                        child: Row(
-                          children: [
-                            SizedBox(width: 4.w,),
-                            Icon(Icons.note_add,color:  Colors.grey.shade700,),
-                            SizedBox(width: 2.w,),
-                            Text("Journal",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
-                          ],
-                        ),
-                     ),
-                      SizedBox(width: 4.w,),
-                 InkWell(
+                InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CalmScreen()));
+                     Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => JournalScreen()));
+               
                   },
-                   child: Container(width: 42.w,
-                      height: 7.h,
-                      decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
-                      child: Row(
-                        children: [
-                          SizedBox(width: 4.w,),
-                          Icon(Icons.assessment,color:  Colors.grey.shade700,),
-                          SizedBox(width: 2.w,),
-                          Text("Assesment",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
-                        ],
-                      ),
-                   ),
-                 ),
+                  child: Container(width: 42.w,
+                          height: 7.h,
+                          decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 4.w,),
+                              Icon(Icons.note_add,color:  Colors.grey.shade700,),
+                              SizedBox(width: 2.w,),
+                              Text("Journal",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
+                            ],
+                          ),
+                       ),
+                ),
+                      SizedBox(width: 4.w,),
+                 
+                   
+                    InkWell(
+                      onTap: () {
+                         Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>MentalAssessmentPage ()));
+               
+                      },
+                       child: Container(width: 42.w,
+                          height: 7.h,
+                          decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 4.w,),
+                              Icon(Icons.assessment,color:  Colors.grey.shade700,),
+                              SizedBox(width: 2.w,),
+                              Text("Assesment",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
+                            ],
+                          ),
+                       ),
+                     ),
+                   
+                
               ],
             ),
             SizedBox(height: 3.h,)   ,

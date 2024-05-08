@@ -9,11 +9,12 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.blue.shade100,
     body: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
      children: [
       SizedBox(height: 6.h,),
-      Text("Let's Start",style: GoogleFonts.epilogue(fontSize: 18.sp,color: Colors.lightBlue,fontWeight: FontWeight.w800),),
+      Text("Let's Start",style: GoogleFonts.epilogue(fontSize: 20.sp,color: Colors.lightBlue,fontWeight: FontWeight.w800),),
        SizedBox(height: 3.h,),
        SizedBox(
         width: 55.w,
