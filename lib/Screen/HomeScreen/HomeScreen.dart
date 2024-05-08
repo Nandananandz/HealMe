@@ -109,17 +109,23 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                      ),
                       SizedBox(width: 4.w,),
-                 Container(width: 42.w,
-                    height: 7.h,
-                    decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 4.w,),
-                        Icon(Icons.assessment,color:  Colors.grey.shade700,),
-                        SizedBox(width: 2.w,),
-                        Text("Assesment",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
-                      ],
-                    ),
+                 InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CalmScreen()));
+                  },
+                   child: Container(width: 42.w,
+                      height: 7.h,
+                      decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(3.w)),
+                      child: Row(
+                        children: [
+                          SizedBox(width: 4.w,),
+                          Icon(Icons.assessment,color:  Colors.grey.shade700,),
+                          SizedBox(width: 2.w,),
+                          Text("Assesment",style: GoogleFonts.epilogue(color: Colors.grey.shade700,fontSize: 12.sp,fontWeight: FontWeight.w500),)
+                        ],
+                      ),
+                   ),
                  ),
               ],
             ),

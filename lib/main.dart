@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healme/Screen/FeelingScreen/HappyScreen.dart';
 import 'package:healme/Screen/HomeScreen/HomeScreen.dart';
+import 'package:healme/Screen/JournalScreen/JournalScreen.dart';
 import 'package:healme/Screen/LoginScreen/LoginScreen.dart';
 import 'package:healme/Screen/LoginScreen/SignupScreen.dart';
 import 'package:sizer/sizer.dart';
@@ -21,7 +22,7 @@ class HealMe extends StatelessWidget {
     return 
     Sizer(
       builder: (context,Orientation,DeviceType) {
-        return MaterialApp(home:SignupScreen());
+        return MaterialApp(home:JournalScreen());
       }
     );
   }
